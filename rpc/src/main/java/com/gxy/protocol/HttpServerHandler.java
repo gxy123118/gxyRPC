@@ -27,6 +27,7 @@ public class HttpServerHandler {
             Class<?>[] parameterTypes = invocation.getParameterTypes();
             Object[] arguments = invocation.getArguments();
             Class implClass = LocalRegister.get(interfaceName.getClass());
+            System.out.println(LocalRegister.);
             Method method = implClass.getMethod(methodName, parameterTypes);
             Object invoke = method.invoke(implClass, arguments);
 

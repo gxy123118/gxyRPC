@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class LocalRegister {
 
-    private static final Map<Class, Class> REGISTER = new HashMap<>();
+    private static  Map<Class, Class> REGISTER = new HashMap<>();
 
     public static void register(Class interfaceName, Class implClass) {
         REGISTER.put(interfaceName, implClass);
@@ -16,4 +16,7 @@ public class LocalRegister {
         return REGISTER.get(interfaceName);
     }
 
+    public static Map<Class, Class> getREGISTER() {
+        return REGISTER;
+    }
 }
